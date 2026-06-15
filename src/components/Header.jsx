@@ -1,12 +1,12 @@
 import "./Header.css";
 
-function Header() {
+function Header(props) {
   return (
     <>
       <header className="header">
         <h1>ReactMeals</h1>
 
-        <button className="cart-button">
+        <button className="cart-button" onClick={props.onShowCart}>
           🛒 Your Cart
           <span className="badge">0</span>
         </button>

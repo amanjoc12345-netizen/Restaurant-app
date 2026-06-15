@@ -1,7 +1,7 @@
 import { createPortal } from "react-dom";
 import "./cart.css";
 
-const Cart = () => {
+const Cart = (props) => {
   return createPortal(
     <div className="backdrop">
       <div className="modal">
@@ -14,7 +14,10 @@ const Cart = () => {
         </div>
 
         <div className="actions">
-          <button className="button--alt">Close</button>
+          <button 
+          className="button--alt" onClick = {props.onClose}>
+            Close
+            </button>
           <button className="button--alt">Order</button>
         </div>
       </div>
