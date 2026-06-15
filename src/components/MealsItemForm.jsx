@@ -1,7 +1,15 @@
 import "./MealsItemForm.css";
-function MealsItemForm() {
+
+function MealsItemForm(props) {
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    props.onAddToCart();
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div>
         <label htmlFor="amount">Amount</label>
         <input
@@ -13,7 +21,7 @@ function MealsItemForm() {
         />
       </div>
 
-      <button>+ Add</button>
+      <button type="submit">+ Add</button>
     </form>
   );
 }

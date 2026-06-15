@@ -1,14 +1,23 @@
+import { useContext } from "react";
+import CartContext from "../store/cart-context";
 import "./Header.css";
 
 function Header(props) {
+  const cartCtx = useContext(CartContext);
+
+  const numberOfCartItems = cartCtx.items.length;
+
   return (
     <>
       <header className="header">
         <h1>ReactMeals</h1>
 
-        <button className="cart-button" onClick={props.onShowCart}>
+        <button
+          className="cart-button"
+          onClick={props.onShowCart}
+        >
           🛒 Your Cart
-          <span className="badge">0</span>
+          <span className="badge">{numberOfCartItems}</span>
         </button>
       </header>
 
