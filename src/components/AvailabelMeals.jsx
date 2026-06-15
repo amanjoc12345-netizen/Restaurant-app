@@ -6,33 +6,38 @@ function AvailableMeals() {
     <section className="meals">
       <ul>
         <MealsItem
+        id = "m1"
           name="Sushi"
           description="Finest fish and veggies"
-          price="Rs.500"
+          price="500"
         />
 
         <MealsItem
+        id = "m2"
           name="Schnitzel"
           description="A german speciality!"
-          price="Rs.700"
+          price="700"
         />
 
         <MealsItem
+        id = "m3"
           name="Barbecue Burger"
           description="Healthy...and green..."
-          price="Rs.600"
+          price="600"
         />
 
         <MealsItem
+        id = "m4"
           name="Noodles"
           description="Healthy...and tasty..."
-          price="Rs.200"
+          price="200"
         />
 
         <MealsItem
+        id = "m5"
           name="Dumplings"
           description="Recommended Taste"
-          price="Rs.350"
+          price="350"
         />
       </ul>
     </section>

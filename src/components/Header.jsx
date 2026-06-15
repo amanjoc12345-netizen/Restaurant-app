@@ -5,7 +5,9 @@ import "./Header.css";
 function Header(props) {
   const cartCtx = useContext(CartContext);
 
-  const numberOfCartItems = cartCtx.items.length;
+  const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
+    return curNumber + item.amount;
+  }, 0);
 
   return (
     <>
